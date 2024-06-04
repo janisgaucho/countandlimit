@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count and limit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Count and limit.</h1>
+
+    <div class="container">
+
+        <div class="config-container">
+            <p>Limite de place</p>
+            <input type="number" id="limit">
+            <p class="valid-limit">&#128190;</p>
+        </div>
+    
+        <div class="counter-container">
+            <h2>En cours</h2>
+            <span class="counter" id="value">0</span>
+        </div>
+    
+    
+        <div class="buttons-container">
+            <button class="btn decrease">-</button>
+            <span class="btn refresh">&#128260;</span>
+            <button class="btn increase">+</button>
+        </div>
+    
+    </div>
+
+    <div class="info-container">
+        <p>Total des places : <span id="total-place">n/a</span></p>
+        <p>Place(s) occupée(s) : <span id="occuped-place">n/a</span></p>
+        <p>Place(s) restante(s) : <span id="free-place">n/a</span></p>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
