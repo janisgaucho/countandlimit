@@ -18,7 +18,7 @@ function changeMessage() {
     occupedPlace.textContent = value.textContent;
 };
 
-//Fonctionnement du compteur et changement de la couleur de l'arrière plan.
+//Fonctionnement du compteur.
 btns.forEach(function (btn) {
     btn.addEventListener("click", function (e)  {
         const styles = e.currentTarget.classList;
@@ -30,23 +30,14 @@ btns.forEach(function (btn) {
             count++;
             occupedPlace.textContent = ~~value.textContent + 1;
             freePlace.textContent = limit.value - count;
-       } else if (styles.contains("increase") && count === limit.value) {
+        } else if (styles.contains("increase") && count === limit.value) {
             count = count;
-        } 
-        if (count > totalPlace.textContent) {
-            body.bgColor = "red";
-        } 
-        else {
-            body.bgColor = "white";
-        }   
+        } else if (styles.contains("refresh")) {
+            value.textContent = "0";
+            occupedPlace.textContent = "0";
+            freePlace.textContent = limit.value;
+            count = 0;
+        }
         value.textContent = count;
     });
 });
-
-//Fonctionnement du bouton reset
-reset.addEventListener("click", doReset);
-function doReset() {
-    occupedPlace.textContent = "0";
-    freePlace.textContent = limit.value;
-    value.textContent = "0";
-}

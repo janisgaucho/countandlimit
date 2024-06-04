@@ -9,6 +9,7 @@ h1, h2, p, span {
 h1 {
     color:#A62B1F;
     text-align: center;
+    padding-bottom: 32px;
 }
 
 h2 {
@@ -16,6 +17,9 @@ h2 {
 }
 body {
     background-color:#193C40;
+    height:100vh;
+    overflow: hidden;
+    align-content: center;
 }
 
 input {
@@ -80,6 +84,12 @@ COUNTER CONTAINER
     width: 20%;
     margin: auto;
 }
+/*Responsive*/
+@media (max-width:768px) {
+    .counter-container {
+        width: 50%;
+    }
+}
 
 .counter {
     font-size: 64px;
@@ -133,4 +143,20 @@ INFO CONTAINER
     justify-content: space-evenly;
     padding-top: 8px;
     color: white;
+    gap: 8px;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.info-container p {
+    background-color: rgba(255, 255, 255, 0.103);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+}
+/*Responsive*/
+@media (max-width:768px) {
+    .info-container {
+        flex-direction: column;
+    }
 }
